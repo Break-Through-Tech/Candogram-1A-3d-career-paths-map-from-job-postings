@@ -18,16 +18,22 @@
 
 ---
 
-> ### 🔍 SME Feedback from the BTT Evaluation Team
->
-> *Please address the following by editing this page:*
->
-> - See advisor feedback section below for detailed technical adjustments.
-> - [Additional feedback item]
-> - [Additional feedback item]
->
-> ---
->
+### 🔍 SME Feedback from the Break Through Tech Evaluation Team
+
+*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | 🟢 | The project involves Python-based libraries and frameworks, particularly for NLP tasks and visualization, ensuring accessibility for students trained in Python. |
+| Data Readiness | 🟢 | The data is specified to be under 1GB, reducing the risk of extensive cleaning and being manageable within the project timeline. It allows for quick ingestion and preparation for analysis. |
+| Resource Check | 🟢 | The project utilizes free-tier tools like Google Colab, which ensures that all students have equal access to the necessary computational resources without additional costs or limitations. |
+
+**Student Fit Score:** 8/10  
+**Technical Depth Score:** 7/10  
+**Overall Recommendation:** APPROVE
+
+**Advisor Feedback Draft:**
+The project demonstrates a strong alignment with industry needs and offers a practical application of machine learning concepts. However, focus on NLP might be challenging for some students. Two areas to strengthen are: 1) providing clear documentation for the data preparation steps to minimize confusion, and 2) encouraging early practice with visualizations to enhance familiarity with the final output. Engaging with mentors who have experience in NLP and visualization techniques may further bolster the learning experience. Let's ensure progress is monitored against the timeline, and offer support as needed.
 
 ---
 
@@ -150,23 +156,5 @@ I'm excited to work with you!
 ## ❓ Questions?
 
 Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
-
----
-
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff only — remove before sharing with students)*
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | GREEN | The project involves Python-based libraries and frameworks, particularly for NLP tasks and visualization, ensuring accessibility for students trained in Python. |
-| Data Readiness | GREEN | The data is specified to be under 1GB, reducing the risk of extensive cleaning and being manageable within the project timeline. It allows for quick ingestion and preparation for analysis. |
-| Resource Check | GREEN | The project utilizes free-tier tools like Google Colab, which ensures that all students have equal access to the necessary computational resources without additional costs or limitations. |
-
-**Student Fit Score:** 8/10  
-**Technical Depth Score:** 7/10  
-**Overall Recommendation:** APPROVE
-
-**Advisor Feedback Draft:**
-The project demonstrates a strong alignment with industry needs and offers a practical application of machine learning concepts. However, focus on NLP might be challenging for some students. Two areas to strengthen are: 1) providing clear documentation for the data preparation steps to minimize confusion, and 2) encouraging early practice with visualizations to enhance familiarity with the final output. Engaging with mentors who have experience in NLP and visualization techniques may further bolster the learning experience. Let's ensure progress is monitored against the timeline, and offer support as needed.
 
 ---
