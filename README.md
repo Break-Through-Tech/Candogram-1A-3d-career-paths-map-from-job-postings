@@ -1,169 +1,121 @@
----
+# AI Studio Challenge Project Title
 
-> ## Challenge Advisor: Update & Finalize Your Project Overview
->
-> > 💡 **These grey text instructions are just for you, the team's Challenge Advisor; please delete them once you have completed the steps below.**
->
-> We've pre-populated this Challenge Project Overview page — which is what will be shared with your Break Through Tech student team in August — using the details from your submission form. In order for your project to be finalized and assigned to a team, please:
->
-> 1. **Send us your GitHub username** so we can add you as a Collaborator to this repo, which will enable you to make edits. If you don't have a username, you can create a free account [here](https://github.com/signup). Once you are ready to share your username, simply reply to the email that sent you to this repo. Once we receive your GitHub username, you will get an email inviting you to join this repo as a Collaborator and can begin making edits. 
-> 2. **Review all sections below** and update or expand any content as needed, making sure to address the SME Feedback in the section immediately below. Look for square brackets to find the places below that require additional inputs from you (e.g., "About [Company / Org Name]").
-> 3. **Add your dataset** to the [data folder](data) in this repo.
-> 4. **Close the Issue assigned to you in this repo** to let us know that you have made your edits and the overview page is ready for final review. You can do this by going to the _Issues_ tab in the top left section of the menu above, add a comment that says "CA review complete", and click the button to Close the Issue. 
->
-> If you're unfamiliar with how to edit a page like this in GitHub, check out [this tutorial](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/handson/edit-readme.html) for a quick overview (start with step 2 and only edit this page), and [this guide](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/markdown.html) on how to use Markdown to compose text. 
-> 
-> ---
->
-> ### 🔍 SME Feedback from the BTT Evaluation Team
->
-> *Please address the following by editing this page:*
->
-> - See advisor feedback section below for detailed technical adjustments.
-> - [Additional feedback item]
-> - [Additional feedback item]
->
-> ---
->
+> 💡 **Note for the team:** This is just a template. Update the above title with your AI Studio Challenge Project name. Remove all guidance notes and example text in this template and populate this README with your own content. You can work on this README throughout AI Studio, and get feedback from your AI Studio Coach and Challenge Advisor before finalizing it.  
 
 ---
 
-# 3D Career Paths Map from Job Postings
+### 👥 **Team Members**
 
-**Company / Org:** Candogram  
-**Challenge Advisor:** Henning Seip, henning.seip@candogram.com  
-**Program:** Break Through Tech AI Studio - Fall 2026
+**Example:**
 
----
-
-## 🏢 About Candogram
-
-Candogram specializes in innovative solutions utilizing data analytics and visualization to enhance user experience in the tech industry. Our focus is on providing insights from job postings to help businesses and individuals make informed decisions about career pathways.
-
----
-
-## 🎯 The Challenge
-
-### Project Summary
-In this project you will use job postings and Text Representation, Dimensionality Reduction, Sentence Embeddings, Nearest Neighbor Search to create an interactive 3D scatterplot to demonstrate career paths from entry level to senior positions. This will help prototype ideas for potential new products.
-
-### Success Criteria
-The team should have a working HTML page with a 3D scatter plot built from job postings where careers paths can be explored from entry level to senior positions.
-
-### Project Milestones
-
-Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
-
-| Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | Data Preparation | Complete data extraction and cleaning from the job postings dataset. |
-| **October** | Model Development | Train models for dimensionality reduction and implement sentence embeddings. |
-| **November** | Interactive Visualization | Finalize the interactive 3D scatter plot incorporating job descriptions and career paths. |
-
-> **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
+| Name             | GitHub Handle | Contribution                                                             |
+|------------------|---------------|--------------------------------------------------------------------------|
+| Taylor Nguyen    | @taylornguyen | Data exploration, visualization, overall project coordination            |
+| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
+| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
+| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
 
 ---
 
-## 📊 Dataset
+## 🎯 **Project Highlights**
 
-**Name and Source:** NYC Job Postings Dataset  
-**Format:** CSV/TSV  
-**Size:** under 1gb  
-**Location:** [Link to dataset or instructions for accessing it]
+**Example:**
 
-### Key Details
-- Students receive a random set of job postings from the New York City job market as a ZIP file. Data format: CSV/ TSV.
-- No known limitations currently identified for the provided job postings dataset.
-- [Link to data dictionary or documentation, if available]
+- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
+- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
+- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
+- Implemented `[specific methodology]` to address industry constraints or expectations.
 
 ---
 
-## 🛠️ Suggested Approach
+## 👩🏽‍💻 **Setup and Installation**
 
-**ML Problem Type:** NLP (Natural Language Processing)
+**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
 
-**Recommended Libraries:**
-- Text Representation
-- Dimensionality Reduction
-- Sentence Embeddings
-- Nearest Neighbor Search
-- Classification
-- Clustering
-- Recommendation Systems
-- Natural Language Processing (NLP)
-
-**Evaluation Metrics:**
-- Accuracy of model predictions
-- User interaction metrics on the visualization
+* How to clone the repository
+* How to install dependencies
+* How to set up the environment
+* How to access the dataset(s)
+* How to run the notebook or scripts
 
 ---
 
-## 📚 Resources to Get Started
+## 🏗️ **Project Overview**
 
-The following resources will help your team understand the problem space and potential technical approaches for this project:
+**Describe:**
 
-**Background Reading:**
-- [Link to an article on NLP and visualization in career applications]
-- [Link to an industry report on job market analytics]
-
-**Technical Tutorials:**
-- [Link to a tutorial on creating 3D visualizations with D3.js]
-- [Link to documentation for a key library like scikit-learn]
-
-**Code Examples:**
-- [Link to a relevant GitHub repo with similar projects]
-- [Link to a sample implementation or starter code for 3D scatter plots]
-
-**Other:**
-- [Links to any additional resources — e.g., relevant academic papers, data visualization videos]
-
-*Feel free to explore beyond these, and share anything interesting you find with me!*
+- How this project is connected to the Break Through Tech AI Program
+- Your AI Studio host company and the project objective and scope
+- The real-world significance of the problem and the potential impact of your work
 
 ---
 
-## 🤝 How We'll Work Together
+## 📊 **Data Exploration**
 
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Slack (Break Through Tech workspace)  
-**Response time:** Within 48 hours on weekdays  
+**You might consider describing the following (as applicable):**
 
-**Recommended Tools:**
-- **Coding:** Google Colab 
-- **Collaboration:** GitHub, Notion
-- **Virtual Meetings:** Zoom, Google Meet
+* The dataset(s) used: origin, format, size, type of data
+* Data exploration and preprocessing approaches
+* Insights from your Exploratory Data Analysis (EDA)
+* Challenges and assumptions when working with the dataset(s)
 
----
+**Potential visualizations to include:**
 
-## 🚀 Getting Started
-
-1. **Review this overview document** and note any questions for our first meeting
-2. **Begin reviewing the dataset** using the link above
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-
-I'm excited to work with you!
+* Plots, charts, heatmaps, feature visualizations, sample dataset images
 
 ---
 
-## ❓ Questions?
+## 🧠 **Model Development**
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+**You might consider describing the following (as applicable):**
+
+* Model(s) used (e.g., CNN with transfer learning, regression models)
+* Feature selection and Hyperparameter tuning strategies
+* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+
+
+---
+
+## 📈 **Results & Key Findings**
+
+**You might consider describing the following (as applicable):**
+
+* Performance metrics (e.g., Accuracy, F1 score, RMSE)
+* How your model performed
+* Insights from evaluating model fairness
+
+**Potential visualizations to include:**
+
+* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
 
 ---
 
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff only — remove before sharing with students)*
+## 🚀 **Next Steps**
 
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | GREEN | The project involves Python-based libraries and frameworks, particularly for NLP tasks and visualization, ensuring accessibility for students trained in Python. |
-| Data Readiness | GREEN | The data is specified to be under 1GB, reducing the risk of extensive cleaning and being manageable within the project timeline. It allows for quick ingestion and preparation for analysis. |
-| Resource Check | GREEN | The project utilizes free-tier tools like Google Colab, which ensures that all students have equal access to the necessary computational resources without additional costs or limitations. |
+**You might consider addressing the following (as applicable):**
 
-**Student Fit Score:** 8/10  
-**Technical Depth Score:** 7/10  
-**Overall Recommendation:** APPROVE
-
-**Advisor Feedback Draft:**
-The project demonstrates a strong alignment with industry needs and offers a practical application of machine learning concepts. However, focus on NLP might be challenging for some students. Two areas to strengthen are: 1) providing clear documentation for the data preparation steps to minimize confusion, and 2) encouraging early practice with visualizations to enhance familiarity with the final output. Engaging with mentors who have experience in NLP and visualization techniques may further bolster the learning experience. Let's ensure progress is monitored against the timeline, and offer support as needed.
+* What are some of the limitations of your model?
+* What would you do differently with more time/resources?
+* What additional datasets or techniques would you explore?
 
 ---
+
+## 📝 **License**
+
+Specify how your project can be used by others. Choose an appropriate license and link it here (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type. 
+
+**Example:**
+This project is licensed under the MIT License.
+
+---
+
+## 📄 **References** (Optional but encouraged)
+
+Cite relevant papers, articles, or resources that supported your project.
+
+---
+
+## 🙏 **Acknowledgements** (Optional but encouraged)
+
+Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
