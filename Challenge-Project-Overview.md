@@ -40,7 +40,7 @@ The project demonstrates a strong alignment with industry needs and offers a pra
 # 3D Career Paths Map from Job Postings
 
 **Company / Org:** Candogram  
-**Challenge Advisor:** Henning Seip, henning.seip@candogram.com  
+**Challenge Advisor:** Henning Seip
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
