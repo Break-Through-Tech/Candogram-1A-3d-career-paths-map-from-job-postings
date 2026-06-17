@@ -141,9 +141,9 @@ In general we recommend the video libraries of Data School (https://www.youtube.
 **Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
-- **Coding:** Google Colab 
-- **Collaboration:** GitHub, Notion
-- **Virtual Meetings:** Zoom, Google Meet
+- **Coding:** VSCode, Jupyter Notebook 
+- **Collaboration:** Slack
+- **Virtual Meetings:** Google Meet
 
 ---
 
