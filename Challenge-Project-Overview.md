@@ -112,16 +112,20 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [Link to an article on NLP and visualization in career applications]
-- [Link to an industry report on job market analytics]
+- https://www.bls.gov/
+- https://www.weforum.org/publications/the-future-of-jobs-report-2025/
+- https://www.edrawmax.com/templates/collection/career-path/
+- https://www.newyorkfed.org/research/college-labor-market#--:explore:unemployment
 
 **Technical Tutorials:**
-- [Link to a tutorial on creating 3D visualizations with D3.js]
-- [Link to documentation for a key library like scikit-learn]
+- https://www.youtube.com/watch?v=8QmkFAthuPU&t=66s
+- Word2Vec: https://www.youtube.com/watch?v=viZrOnJclY0
+- Dimensionality Reduction: https://www.youtube.com/watch?v=HMOI_lkzW08
+In general we recommend the video libraries of Data School (https://www.youtube.com/@dataschool) and StatQuest (https://www.youtube.com/@statquest)
 
 **Code Examples:**
-- [Link to a relevant GitHub repo with similar projects]
-- [Link to a sample implementation or starter code for 3D scatter plots]
+- https://www.youtube.com/@dataschool
+
 
 **Other:**
 - [Links to any additional resources — e.g., relevant academic papers, data visualization videos]
