@@ -40,7 +40,7 @@ The project demonstrates a strong alignment with industry needs and offers a pra
 # 3D Career Paths Map from Job Postings
 
 **Company / Org:** Candogram  
-**Challenge Advisor:** Henning Seip
+**Challenge Advisor:** Henning Seip   
 **AI Studio Coach:** Nagalakshmi Pulivarthi,nagalakshmi.pulivarthi@breakthroughtech.org  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
