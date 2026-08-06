@@ -120,10 +120,6 @@ In general we recommend the video libraries of Data School (https://www.youtube.
 **Code Examples:**
 - https://www.youtube.com/@dataschool
 
-
-**Other:**
-- [Links to any additional resources — e.g., relevant academic papers, data visualization videos]
-
 *Feel free to explore beyond these, and share anything interesting you find with me!*
 
 ---
