@@ -58,7 +58,10 @@ Candogram specializes in innovative solutions utilizing data analytics and visua
 In this project you will use job postings and Text Representation, Dimensionality Reduction, Sentence Embeddings, Nearest Neighbor Search to create an interactive 3D scatterplot to demonstrate career paths from entry level to senior positions. This will help prototype ideas for potential new products.
 
 ### Success Criteria
-The team should have a working HTML page with a 3D scatter plot built from job postings where careers paths can be explored from entry level to senior positions.
+The team should have a working HTML page with a 3D scatter plot built from job postings where careers paths can be explored from entry level to senior positions, i.e. Entry Level Accountant -> Data Engineer -> Data Platform Manager -> Distinguished Engineer
+
+### Stretch Goal
+The regular version of this project uses job titles only to determine how jobs are related and the level of experience required. The stretch goal is to incorporate the job description and requirements into this model.
 
 ### Project Milestones
 
@@ -66,9 +69,9 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | Data Preparation | Complete data extraction and cleaning from the job postings dataset. |
-| **October** | Model Development | Train models for dimensionality reduction and implement sentence embeddings. |
-| **November** | Interactive Visualization | Finalize the interactive 3D scatter plot incorporating job descriptions and career paths. |
+| **September** | Data Preparation Complete | [TBD] |
+| **October** | Data Model Complete | [TBD]  |
+| **November** | Interactive 3D Scatter Plot Complete | [TBD] |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -76,35 +79,25 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** NYC Job Postings Dataset  
+**Name and Source:** [TBD]
 **Format:** CSV/TSV  
 **Size:** under 1gb  
 **Location:** [https://github.com/Break-Through-Tech/Candogram-3D_Career_Paths_Map/tree/main/data]
 
 ### Key Details
 - Students receive a random set of job postings from the New York City job market as a ZIP file. Data format: CSV/ TSV.
-- No known limitations currently identified for the provided job postings dataset.
-- [Link to data dictionary or documentation, if available]
 
 ---
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** NLP (Natural Language Processing)
+**ML Problem Type:** Classification, Clustering, Recommendation Systems, Natural Language Processing (NLP)
 
 **Recommended Libraries:**
-- Text Representation
-- Dimensionality Reduction
-- Sentence Embeddings
-- Nearest Neighbor Search
-- Classification
-- Clustering
-- Recommendation Systems
-- Natural Language Processing (NLP)
+- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
 
 **Evaluation Metrics:**
-- Accuracy of model predictions
-- User interaction metrics on the visualization
+- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
 
 ---
 
@@ -137,8 +130,8 @@ In general we recommend the video libraries of Data School (https://www.youtube.
 
 ## 🤝 How We'll Work Together
 
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Slack (Break Through Tech workspace)  
+**Check-ins:** During our biweekly 45-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
+**Communication:** Discord (Break Through Tech workspace)  
 **Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
@@ -160,6 +153,6 @@ I'm excited to work with you!
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session C).
 
 ---
