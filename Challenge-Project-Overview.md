@@ -82,7 +82,7 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 **Name and Source:** [TBD]   
 **Format:** CSV/TSV  
 **Size:** under 1gb  
-**Location:** [https://github.com/Break-Through-Tech/Candogram-3D_Career_Paths_Map/tree/main/data]
+**Location:** https://github.com/Break-Through-Tech/Candogram-3D_Career_Paths_Map/tree/main/data
 
 ### Key Details
 - Students receive a random set of job postings from the New York City job market as a ZIP file. Data format: CSV/ TSV.
