@@ -54,12 +54,18 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 **ML Problem Type:** Classification, Clustering, Recommendation Systems, Natural Language Processing (NLP)
 
-**Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
-
-**Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
-
+**Recommended Libraries:**  
+   - pandas, numpy — data loading and cleaning  
+   -  Hugging Face Transformers / sentence-transformers — generate embeddings from job titles and descriptions (runs locally, no API key needed)  
+   -  PyTorch — deep learning backend behind sentence-transformers  
+   -  umap-learn — reduce embeddings down to 3D coordinates  
+   -  scikit-learn — PCA/t-SNE (alt. dimensionality reduction), NearestNeighbors, KMeans/DBSCAN clustering, and evaluation metrics
+   -  faiss — optional, faster nearest neighbor search if the dataset grows
+   - matplotlib, seaborn — quick 2D exploratory plots before building the 3D view  
+   -  plotly — build the interactive 3D scatter plot and export to a self-contained HTML file (fig.write_html())  
+   -  three.js — optional stretch-goal alternative to Plotly for a more custom web visualization   
+    
+ 
 ---
 
 ## 📚 Resources to Get Started
