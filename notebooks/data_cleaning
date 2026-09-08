@@ -1,1 +1,58 @@
+# import library
+from cleantext import clean
+import pandas as pd
+import re
 
+# csv file with job listings
+
+number_of_rows = 4
+file_path = "C:/Users/gymna/AndroidStudioProjects/porcupine/demo/react-native/Candogram-1A-3d-career-paths-map-from-job-postings/data/Jobs_NYC_Postings_20260608.csv"
+
+df = pd.read_csv(file_path, nrows=number_of_rows)
+
+#removes duplicates
+df_cleaned = df.drop_duplicates()
+
+#full cleaning pipeline for job description column
+def irrelevant_section_cutting(job_description):
+    #if the scraped descripton is not a string type, return nothing
+    if not isinstance(job_description, str):
+        return ""
+
+    #gets rid of the whitespace around the descriptions
+    formatted_text = job_description.strip()
+    lowercased_text = formatted_text.lower()
+
+    #list of phrases that would denote a section that would not be a part of the job description
+    non_job_description_headers = ["about us", "benefits"]
+
+    #where the text should be cut off
+    current_cutoff_point = len(lowercased_text)
+
+    #don't allow the cutoff point to go below this character count
+    forbidden_cutoff_len = 10
+
+    #loops through all the phrases in case one is detected
+    for header in non_job_description_headers:
+
+        #ensures headers aren't accidentaly just a part of another word and case does not matter
+        found = re.search(r'\b' + re.escape(header) + r'\b', lowercased_text.lower())
+
+        #if a different header is found
+        if found:
+            if found.start() >= forbidden_cutoff_len:
+                if found.start() < current_cutoff_point:
+                    current_cutoff_point = found.start()
+    #text that covers job description only, but potentially has weird character encodings
+    relevant_content = lowercased_text[:current_cutoff_point]
+
+    cleaned_text = clean(text=relevant_content,
+          fix_unicode=True,
+          to_ascii=True)
+
+    return cleaned_text.strip()
+
+#removes sections of the job description most likely not a part of the job description based on boilerplates/common terms
+df_cleaned['cleaned descriptions'] = df_cleaned['Job Description'].apply(irrelevant_section_cutting)
+
+print(df_cleaned['cleaned descriptions'])
