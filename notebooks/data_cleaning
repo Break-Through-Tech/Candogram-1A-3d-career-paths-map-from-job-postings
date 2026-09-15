@@ -2,11 +2,14 @@
 from cleantext import clean
 import pandas as pd
 import re
+import os
 
 # csv file with job listings
 
 number_of_rows = 4
-file_path = "C:/Users/gymna/AndroidStudioProjects/porcupine/demo/react-native/Candogram-1A-3d-career-paths-map-from-job-postings/data/Jobs_NYC_Postings_20260608.csv"
+file_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(file_dir, "..", "data", "Jobs_NYC_Postings_20260608.csv")
+
 
 df = pd.read_csv(file_path, nrows=number_of_rows)
 
@@ -56,3 +59,45 @@ def irrelevant_section_cutting(job_description):
 df_cleaned['cleaned descriptions'] = df_cleaned['Job Description'].apply(irrelevant_section_cutting)
 
 print(df_cleaned['cleaned descriptions'])
+
+
+# --------------------------------------------------------------------
+# Outlier detection (Pedrocia)
+# Flags rows rather than dropping them, so the team can decide
+# downstream whether flagged rows should be excluded from the
+#clustering step or kept as legitimate senior-role signal.
+# ---------------------------------------------------------------------
+
+def flag_placeholder_positions(df):
+    #Flag rows where the number of Positions looks like a placeholder rather than a real count
+    df = df.copy()
+    df['positions_outlier_flag'] = df['# Of Positions'] >= 9999
+    return df
+
+def flag_zero_salary(df):
+    #Flag rows where Salary Range is From 0.
+    df = df.copy()
+    df['zero_salary_flag'] = df['Salary Range From'] == 0
+    return df
+
+def flag_salary_outliers(df):
+    #IQR-based outlier flag, computed separately per Salary Frequency to avoid mixing Annual/Hourly/Daily.
+    df = df.copy()
+    df['salary_outlier_flag'] = False
+    for freq, group in df.groupby('Salary Frequency'):
+        q1, q3 = group['Salary Range From'].quantile([0.25, 0.75])
+        iqr = q3 - q1
+        lower, upper = q1 - 1.5 * iqr, q3 + 1.5 * iqr
+        mask = (group['Salary Range From'] < lower) | (group['Salary Range From'] > upper)
+        df.loc[group.index[mask], 'salary_outlier_flag'] = True
+    return df
+
+df_cleaned = flag_placeholder_positions(df_cleaned)
+df_cleaned = flag_zero_salary(df_cleaned)
+df_cleaned = flag_salary_outliers(df_cleaned)
+
+print(df_cleaned[['Job ID', 'positions_outlier_flag', 'zero_salary_flag', 'salary_outlier_flag']])
+
+
+
+
