@@ -6,7 +6,8 @@ import os
 
 # csv file with job listings
 
-number_of_rows = 4
+NUMBER_OF_ROWS = 4
+
 file_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(file_dir, "..", "data", "Jobs_NYC_Postings_20260608.csv")
 
@@ -18,7 +19,7 @@ df_cleaned = df.drop_duplicates()
 
 #full cleaning pipeline for job description column
 def irrelevant_section_cutting(job_description):
-    #if the scraped descripton is not a string type, return nothing
+    #if the scraped description is not a string type, return nothing
     if not isinstance(job_description, str):
         return ""
 
@@ -27,7 +28,7 @@ def irrelevant_section_cutting(job_description):
     lowercased_text = formatted_text.lower()
 
     #list of phrases that would denote a section that would not be a part of the job description
-    non_job_description_headers = ["about us", "benefits"]
+    non_job_description_headers = ["about us", "benefits", "Explore Careers", "Job Security"]
 
     #where the text should be cut off
     current_cutoff_point = len(lowercased_text)
@@ -38,7 +39,7 @@ def irrelevant_section_cutting(job_description):
     #loops through all the phrases in case one is detected
     for header in non_job_description_headers:
 
-        #ensures headers aren't accidentaly just a part of another word and case does not matter
+        #ensures headers aren't accidentally just a part of another word and case does not matter
         found = re.search(r'\b' + re.escape(header) + r'\b', lowercased_text.lower())
 
         #if a different header is found
@@ -69,9 +70,10 @@ print(df_cleaned['cleaned descriptions'])
 # ---------------------------------------------------------------------
 
 def flag_placeholder_positions(df):
+    placeholder_position_value
     #Flag rows where the number of Positions looks like a placeholder rather than a real count
     df = df.copy()
-    df['positions_outlier_flag'] = df['# Of Positions'] >= 9999
+    df['positions_outlier_flag'] = df['# Of Positions'] >= placeholder_position_value
     return df
 
 def flag_zero_salary(df):
@@ -84,10 +86,15 @@ def flag_salary_outliers(df):
     #IQR-based outlier flag, computed separately per Salary Frequency to avoid mixing Annual/Hourly/Daily.
     df = df.copy()
     df['salary_outlier_flag'] = False
+    #
+    salary_range_min = 0.25
+    salary_range_max = 0.75
+    scaling_factor = 1.5
+
     for freq, group in df.groupby('Salary Frequency'):
-        q1, q3 = group['Salary Range From'].quantile([0.25, 0.75])
+        q1, q3 = group['Salary Range From'].quantile([salary_range_min, salary_range_max])
         iqr = q3 - q1
-        lower, upper = q1 - 1.5 * iqr, q3 + 1.5 * iqr
+        lower, upper = q1 - scaling_factor * iqr, q3 + scaling_factor * iqr
         mask = (group['Salary Range From'] < lower) | (group['Salary Range From'] > upper)
         df.loc[group.index[mask], 'salary_outlier_flag'] = True
     return df
