@@ -28,7 +28,12 @@ def irrelevant_section_cutting(job_description):
     lowercased_text = formatted_text.lower()
 
     #list of phrases that would denote a section that would not be a part of the job description
-    non_job_description_headers = ["about us", "benefits", "Explore Careers", "Job Security"]
+  
+    non_job_description_headers = ["about us", "benefits", "Explore Careers", "Job Security", "why you should work for us", 
+                                   "to request reasonable accommodation to participate in the job application or interview process", 
+                                   "contact", "to apply", "applications", "inclusive equal opportunity", "request accommodations", 
+                                   "work from home policy", "our mission", "additional information", 
+                                   "detailed information", "note", "legal work status", "preferred skills", "hours"]
 
     #where the text should be cut off
     current_cutoff_point = len(lowercased_text)
