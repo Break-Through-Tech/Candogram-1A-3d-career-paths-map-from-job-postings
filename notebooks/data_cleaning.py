@@ -38,8 +38,8 @@ def irrelevant_section_cutting(job_description):
     #where the text should be cut off
     current_cutoff_point = len(lowercased_text)
 
-    #don't allow the cutoff point to go below this character count
-    forbidden_cutoff_len = 10
+    #don't allow the cutoff point to go below this character count: smallest job description = 542 chars
+    forbidden_cutoff_len = 540 
 
     #loops through all the phrases in case one is detected
     for header in non_job_description_headers:
@@ -104,9 +104,20 @@ def flag_salary_outliers(df):
         df.loc[group.index[mask], 'salary_outlier_flag'] = True
     return df
 
+def handling_nulls(df):
+    df['Minimum Qual Requirements'].fillna("unavailable", inplace=True)
+    df['Preferred Skills'].fillna("unavailable", inplace=True)
+    df['Additional Information'].fillna("unavailable", inplace=True)
+    df['To Apply'].fillna("unavailable", inplace=True)
+    # drop 'Recruitment Contact' and 'Hours/Shift' columns due to large number of nulls (> 85%)
+    df.drop(columns=['Recruitment Contact'], inplace=True)
+    df.drop(columns=['Hours/Shift'], inplace=True)
+    return df
+
 df_cleaned = flag_placeholder_positions(df_cleaned)
 df_cleaned = flag_zero_salary(df_cleaned)
 df_cleaned = flag_salary_outliers(df_cleaned)
+df_cleaned = handling_nulls(df_cleaned)
 
 print(df_cleaned[['Job ID', 'positions_outlier_flag', 'zero_salary_flag', 'salary_outlier_flag']])
 
