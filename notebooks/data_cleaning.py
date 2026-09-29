@@ -33,7 +33,7 @@ def irrelevant_section_cutting(job_description):
                                    "to request reasonable accommodation to participate in the job application or interview process", 
                                    "contact", "to apply", "applications", "inclusive equal opportunity", "request accommodations", 
                                    "work from home policy", "our mission", "additional information", 
-                                   "detailed information", "note", "legal work status", "preferred skills", "hours"]
+                                   "detailed information", "legal work status", "preferred skills"]
 
     #where the text should be cut off
     current_cutoff_point = len(lowercased_text)
