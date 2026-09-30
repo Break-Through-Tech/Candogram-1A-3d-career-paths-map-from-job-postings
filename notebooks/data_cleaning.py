@@ -6,11 +6,11 @@ import os
 
 # csv file with job listings
 
-NUMBER_OF_ROWS = 4
+NUMBER_OF_ROWS = 20
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(file_dir, "..", "data", "Jobs_NYC_Postings_20260608.csv")
-
+embed_input_path = os.path.join(file_dir, "..", "data", "embedding_input.csv")
 
 df = pd.read_csv(file_path, nrows=NUMBER_OF_ROWS)
 
@@ -109,6 +109,7 @@ df_cleaned = flag_zero_salary(df_cleaned)
 df_cleaned = flag_salary_outliers(df_cleaned)
 
 print(df_cleaned[['Job ID', 'positions_outlier_flag', 'zero_salary_flag', 'salary_outlier_flag']])
+df_cleaned.to_csv(embed_input_path, index=False)
 
 
 
