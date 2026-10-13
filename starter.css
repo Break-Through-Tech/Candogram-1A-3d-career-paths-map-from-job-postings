@@ -40,7 +40,7 @@ a { color: inherit; }
 .brand-mark i:nth-child(1) { height: 9px; }
 .brand-mark i:nth-child(2) { height: 15px; background: #d48365; }
 .brand-mark i:nth-child(3) { height: 12px; background: #78928a; }
-.topbar-context, .project-link, .eyebrow, .mono-label, .map-kicker, .notice-label, .coming-soon-tag, .todo-mark, .notes-label, .page-footer { font-family: var(--mono); font-size: 9px; }
+.topbar-context, .project-link, .eyebrow, .mono-label, .map-kicker, .notice-label, .coming-soon-tag, .notes-label, .page-footer { font-family: var(--mono); font-size: 9px; }
 .topbar-context { color: var(--muted); }
 .context-divider { padding: 0 7px; color: #a3aca5; }
 .project-link { color: var(--muted); text-decoration: none; }
@@ -63,15 +63,11 @@ h1 { margin: 0; font-size: clamp(27px, 3vw, 36px); line-height: 1.15; font-weigh
 .notice-label { flex: 0 0 auto; color: #765e4e; font-size: 8px; }
 .notice p { margin: 0; color: #625e57; font-size: 11px; }
 
-.workspace { display: grid; grid-template-columns: 220px minmax(360px, 1fr) 230px; min-height: 540px; border: 1px solid var(--line); background: var(--surface); }
-.project-sidebar, .project-notes { min-width: 0; padding: 18px 16px; }
-.project-sidebar { border-right: 1px solid var(--line); }
+.workspace { display: grid; grid-template-columns: minmax(360px, 1fr) 230px; min-height: 620px; border: 1px solid var(--line); background: var(--surface); }
+.project-notes { min-width: 0; padding: 18px 16px; }
 .project-notes { border-left: 1px solid var(--line); }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 20px; font-size: 12px; font-weight: 650; }
 .mono-label { color: #96a098; font-size: 8px; font-weight: 400; }
-.todo-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
-.todo-list li { display: grid; grid-template-columns: 42px 1fr; gap: 7px; padding: 11px 0; border-top: 1px solid #e9ece8; color: #58645c; font-size: 11px; line-height: 1.45; }
-.todo-mark { color: #92795d; font-size: 8px; }
 
 .map-panel { min-width: 0; display: flex; flex-direction: column; padding: 17px; }
 .map-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; }
@@ -79,7 +75,7 @@ h1 { margin: 0; font-size: clamp(27px, 3vw, 36px); line-height: 1.15; font-weigh
 .map-kicker { color: #8a958e; font-size: 8px; }
 .map-title strong { font-size: 13px; font-weight: 600; }
 .coming-soon-tag { padding: 6px 8px; border: 1px solid #dce5dd; color: var(--green); font-size: 8px; white-space: nowrap; }
-.map-placeholder { flex: 1; min-height: 390px; display: grid; place-items: center; border: 1px dashed #cfd7d0; background: #fafbf9; text-align: center; }
+.map-placeholder { flex: 1; min-height: 460px; display: grid; place-items: center; border: 1px dashed #cfd7d0; background: #fafbf9; text-align: center; }
 .placeholder-content { max-width: 310px; padding: 24px; }
 .placeholder-mark { display: grid; place-items: center; width: 38px; height: 38px; margin: 0 auto 15px; border: 1px solid #d2dbd4; color: #728078; font-family: var(--mono); font-size: 11px; }
 .placeholder-title { margin: 0; font-size: 14px; font-weight: 600; }
@@ -94,8 +90,7 @@ h1 { margin: 0; font-size: clamp(27px, 3vw, 36px); line-height: 1.15; font-weigh
 .page-footer span span { padding: 0 4px; color: #b8785f; }
 
 @media (max-width: 900px) {
-  .workspace { grid-template-columns: 190px minmax(330px, 1fr); }
-  .project-notes { grid-column: 1 / -1; border-top: 1px solid var(--line); border-left: 0; }
+  .workspace { grid-template-columns: minmax(330px, 1fr) 190px; }
   .about-copy { max-width: 520px; }
 }
 
@@ -110,10 +105,9 @@ h1 { margin: 0; font-size: clamp(27px, 3vw, 36px); line-height: 1.15; font-weigh
   .notice { align-items: start; flex-direction: column; gap: 6px; padding: 10px 11px; }
   .notice p { line-height: 1.5; }
   .workspace { grid-template-columns: 1fr; }
-  .project-sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
   .section-heading { margin-bottom: 12px; }
-  .project-notes { grid-column: auto; border-top: 0; }
+  .project-notes { border-top: 1px solid var(--line); border-left: 0; }
   .map-panel { padding: 14px 12px; }
-  .map-placeholder { min-height: 300px; }
+  .map-placeholder { min-height: 350px; }
   .page-footer { gap: 12px; font-size: 7px; }
 }
