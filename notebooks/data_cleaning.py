@@ -5,14 +5,11 @@ import re
 import os
 
 # csv file with job listings
-
-NUMBER_OF_ROWS = 20
-
 file_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(file_dir, "..", "data", "Jobs_NYC_Postings_20260608.csv")
 embed_input_path = os.path.join(file_dir, "..", "data", "embedding_input.csv")
 
-df = pd.read_csv(file_path, nrows=NUMBER_OF_ROWS)
+df = pd.read_csv(file_path)
 
 #removes duplicates
 df_cleaned = df.drop_duplicates()
