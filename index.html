@@ -24,19 +24,27 @@
         </div>
       </section>
 
+      <div class="notice" aria-live="polite">
+        <span class="notice-label">STATUS</span>
+        <p>Interactive 3D career map is loading from the UMAP projection used for the project.</p>
+      </div>
+
       <section class="workspace" aria-label="Project overview">
         <section class="map-panel" aria-labelledby="map-title">
           <div class="map-toolbar">
             <div class="map-title"><span class="map-kicker">PROJECT VISUALIZATION</span><strong id="map-title">3D career map</strong></div>
-            <span class="coming-soon-tag">COMING SOON</span>
+            <span class="coming-soon-tag">LIVE VIEW</span>
           </div>
-          <div class="map-placeholder">
-            <div class="placeholder-content">
-              <span class="placeholder-mark" aria-hidden="true">3D</span>
-              <p class="placeholder-title">The career map will go here</p>
-              <p class="placeholder-copy">This space will hold the interactive career map.</p>
-            </div>
+
+          <div class="map-controls" aria-label="Map filtering controls">
+            <label for="career-level-filter" class="map-filter-label">Career level</label>
+            <select id="career-level-filter" class="map-filter">
+              <option value="All">All levels</option>
+            </select>
           </div>
+
+          <div id="career-level-legend" class="career-legend" aria-label="Career level legend"></div>
+          <div id="career-map" class="map-canvas" aria-label="3D UMAP career map"></div>
         </section>
 
         <aside class="project-notes" aria-labelledby="about-title">
@@ -46,13 +54,16 @@
           <p class="about-copy">The dataset used for this project is current job postings available on the City of New
           York’s official jobs site provided by the Department of Citywide Administrative Services (DCAS).</p>
           <div class="section-heading" style="padding-top: 15px;"><span id="about-title">Features</span></div>
-          <p class="about-copy">TO BE ADDED WHEN MODEL IS IMPLEMENTED.</p>
+          <p class="about-copy">The interactive view shows a 3D UMAP projection of job titles, colored by career level and enriched with hover details.</p>
           <div class="section-heading" style="padding-top: 15px;"><span id="about-title">How to Navigate</span></div>
-          <p class="about-copy">TO BE ADDED WHEN MODEL IS IMPLEMENTED.</p>          
+          <p class="about-copy">Use the mouse to rotate the plot, zoom in for larger clusters, and hover over points to view job titles and career-level metadata.</p>
         </aside>
       </section>
 
       <footer class="page-footer"><span>CANDOGRAM <span>×</span> AI STUDIO</span><span>FALL 2026</span></footer>
     </main>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
