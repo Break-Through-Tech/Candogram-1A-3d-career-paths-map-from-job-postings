@@ -12,7 +12,7 @@ embed_input_path = os.path.join(file_dir, "..", "data", "embedding_input.csv")
 df = pd.read_csv(file_path)
 
 #removes duplicates
-df_cleaned = df.drop_duplicates()
+df_cleaned = df.drop_duplicates(subset="Job ID").copy()
 
 #full cleaning pipeline for job description column
 def irrelevant_section_cutting(job_description):
