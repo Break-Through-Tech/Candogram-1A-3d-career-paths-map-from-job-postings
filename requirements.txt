@@ -1,3 +1,5 @@
 sentence-transformers~=6.1.0
 pandas~=3.0.5
 cleantext~=1.1.4
+umap-learn
+dash

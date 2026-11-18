@@ -1,5 +1,6 @@
 #I chose a huggingface embedding model.
 #You must set up an account along with a couple quick changes to get started
+# Sarah: I typed pip install -U sentence-transformers into VSCode terminal
 
 
 import pandas as pd
