@@ -1,4 +1,5 @@
 # import library
+import unicodedata
 from cleantext import clean
 import pandas as pd
 import re
@@ -52,9 +53,10 @@ def irrelevant_section_cutting(job_description):
     #text that covers job description only, but potentially has weird character encodings
     relevant_content = lowercased_text[:current_cutoff_point]
 
-    cleaned_text = clean(text=relevant_content,
-          fix_unicode=True,
-          to_ascii=True)
+    
+
+    cleaned_text = unicodedata.normalize("NFKD", relevant_content)
+    cleaned_text = cleaned_text.encode("ascii", "ignore").decode("ascii")
 
     return cleaned_text.strip()
 

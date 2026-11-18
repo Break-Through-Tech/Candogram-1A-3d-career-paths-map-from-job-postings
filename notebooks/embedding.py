@@ -18,7 +18,9 @@ df = pd.read_csv(file_path)
 
 sentences = df['cleaned descriptions'].astype(str).tolist()
 
-model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+model = SentenceTransformer(
+    "all-MiniLM-L6-v2",
+    device="cpu")
 embeddings = model.encode(sentences, show_progress_bar=True, batch_size = 16)
 
 #//////////////////////////////////////////////////////////////////////////////#
