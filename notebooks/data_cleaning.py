@@ -36,7 +36,7 @@ def irrelevant_section_cutting(job_description):
     current_cutoff_point = len(lowercased_text)
 
     #don't allow the cutoff point to go below this character count
-    forbidden_cutoff_len = 10
+    forbidden_cutoff_len = 540
 
     #loops through all the phrases in case one is detected
     for header in non_job_description_headers:
